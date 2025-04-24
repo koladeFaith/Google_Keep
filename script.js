@@ -1,38 +1,40 @@
 const allNotes = [];
 var itemToEdit = "";
 const addNote = () => {
-  if (note.value === "") {
+  if (noteTaken.value === "") {
     alert("Fill in something, please");
   } else {
-    allNotes.push(note.value);
-    note.value = "";
+    allNotes.push(noteTaken.value);
+    noteTaken.value = "";
     displayNotes();
   }
 };
 
 const displayNotes = () => {
   show.innerHTML = "";
+  show.innerHTML = "<h3>All notes</h3>";
+
   allNotes.map((note, index) => {
     show.innerHTML += `
-      <center>
-        <div style="display: flex; justify-content:center; align-items:center;  gap: 4px;">
+      
+        <div>
         <p>${index + 1}. ${note}</p>
         <button onclick='editNote(${JSON.stringify(
           note
-        )}, ${index})'>Edit</button>
+        )}, ${index})' data-bs-toggle="modal"
+      data-bs-target="#exampleModal">Edit</button>
         <button onclick="deleteNote(${index})">Delete</button>
-        </div></center>
+        </div>
         `;
   });
 };
 const editNote = (item, index) => {
-  update.style.display = "block";
-  add.style.display = "none";
+ 
   note.value = item;
   itemToEdit = index;
 };
 const updateNote = () => {
-  if (note.value === "") {
+  if (noteTaken.value === "") {
     alert("Fill in something, please");
   } else {
     update.style.display = "none";

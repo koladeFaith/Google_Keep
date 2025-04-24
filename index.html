@@ -20,14 +20,50 @@
   </head>
   <body>
     <h1>Write your note with ease!</h1>
-    <input type="text" placeholder="Enter your text" id="note" autofocus />
+    <input type="text" placeholder="Enter your text" id="noteTaken" autofocus />
     <br /><br />
     <button onclick="addNote() " id="add">Add</button>
-    <button onclick="updateNote()" style="display: none" id="update">
-      Update
-    </button>
+
     <div id="show"></div>
+
+ 
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Edit note</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+    
+            
+    <input type="text" placeholder="Enter the new text" id="note" autofocus />
+
+
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal">
+              Close
+            </button>
+            <button type="button" id="saveEdit" class="btn btn-success">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
-
