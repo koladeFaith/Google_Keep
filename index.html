@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <center>
-        <h1>Write your note with ease!</h1>
-    <input type="text" placeholder="Enter your text" id="note" autofocus> <br><br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goggle Keep</title>
+    <!-- CSS LINK-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous" />
+    <!-- SCRIPT LINK-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"></script>
+    <!-- Scrpit-defer -->
+  </head>
+  <body>
+    <h1>Write your note with ease!</h1>
+    <input type="text" placeholder="Enter your text" id="note" autofocus />
+    <br /><br />
     <button onclick="addNote() " id="add">Add</button>
-    <button onclick="updateNote()" style="display: none;" id="update">Update</button>
+    <button onclick="updateNote()" style="display: none" id="update">
+      Update
+    </button>
     <div id="show"></div>
-    </center>
-<style class="; displa"></style>
-</body>
-<script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </html>
+
